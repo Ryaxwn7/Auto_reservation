@@ -23,4 +23,3 @@ jobs:
         run: pip install bs4 easyocr requests cv2 numpy
       - name: Run app
         run: python main.py
-        env:
