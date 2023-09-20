@@ -20,6 +20,6 @@ jobs:
         with:
           python-version: '3.8'
       - name: Prepare environment
-        run: pip install bs4 easyocr requests cv2 numpy
+        run: pip install bs4 easyocr requests opencv-python numpy
       - name: Run app
         run: python main.py
