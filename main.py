@@ -9,7 +9,7 @@ USER_PASSWORD = "Mmmmjl123123"
 CAMPUS_NAME = "邯郸校区"
 SPORT_NAME = "网球"
 SPORT_LOCATION = "南区网球场"
-DATE = "2023-09-25"
+DATE = "2023-09-26"
 TIME = "20:00"
 
 # Optional data
