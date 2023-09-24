@@ -9,8 +9,11 @@ USER_PASSWORD = "Mmmmjl123123"
 CAMPUS_NAME = "邯郸校区"
 SPORT_NAME = "网球"
 SPORT_LOCATION = "南区网球场"
-DATE = "2023-09-26"
-TIME = "20:00"
+DATE = "2023-09-27"
+TIME_1 = "20:00"
+TIME_2 = "21:00"
+TIME_3 = "19:00"
+TIME_4 = "18:00"
 
 # Optional data
 EMAILS = ["jialunma88@163.com"]  # Receive error notifications by email
@@ -23,7 +26,10 @@ if __name__ == '__main__':
         logged_in_session = apis.login(USER_ID, USER_PASSWORD)
         campus_id, sport_id = apis.load_sports_and_campus_id(logged_in_session, SERVICE_CATEGORY, CAMPUS_NAME, SPORT_NAME)
         service_id = apis.get_service_id(logged_in_session, SERVICE_CATEGORY, campus_id, sport_id, SPORT_LOCATION)
-        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME)
+        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_1)
+        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_2)
+        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_3)
+        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_4)
     except Exception as e:
         if EMAILS:
             import smtplib
