@@ -6,7 +6,7 @@ name: auto reservation
 # or API.
 on:
   schedule:
-    - cron: '57 22 * * *'
+    - cron: '27 23 * * *'
   workflow_dispatch:
 jobs:
   build:
