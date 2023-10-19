@@ -146,7 +146,9 @@ def reserve(s: requests.Session, service_id, service_cat_id, target_date, target
 
     for reservable_option in reservable_options_list:
         if reservable_option['ifOrder']:  # Filter out non-reservable objects
-            if reservable_option['serviceTime']['beginTime'] == target_time and reservable_option['openDate'] == target_date:
+            print(reservable_option['serviceTime']['beginTime'],target_time,reservable_option['openDate'],target_date)
+            #if reservable_option['serviceTime']['beginTime'] == target_time and reservable_option['openDate'] == target_date:
+            if True:
                 logs.log_console(
                     f"Begin Reserving Target: {reservable_option['openDate']} {reservable_option['serviceTime']['beginTime']}, Target ID: {reservable_option['id']}, Target ServiceTime ID: {reservable_option['serviceTime']['id']}",
                     "VITAL")
