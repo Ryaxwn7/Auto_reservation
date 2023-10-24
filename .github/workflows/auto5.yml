@@ -1,0 +1,25 @@
+# This is a basic workflow that is manually triggered
+
+name: auto reservation 2
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  schedule:
+    - cron: '58 22 * * *'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout codes
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - name: Prepare environment
+        run: pip install bs4 easyocr requests opencv-python numpy lxml
+      - name: Run app
+        run: python main.py
