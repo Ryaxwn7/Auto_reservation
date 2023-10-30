@@ -30,7 +30,7 @@ if __name__ == '__main__':
         service_id = apis.get_service_id(logged_in_session, SERVICE_CATEGORY, campus_id, sport_id, SPORT_LOCATION)
         now = datetime.datetime.now()
         formatted_time = now.strftime("%H:%M:%S")
-        print("格式化后的时间：", formatted_time)
+        print("运行时间：", formatted_time)
         apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_1)
         apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_2)
         apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_3)
