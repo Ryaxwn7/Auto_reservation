@@ -24,13 +24,17 @@ EMAIL_PASSWORD = "mmmjl123123"  # Password for the email account
 
 
 if __name__ == '__main__':
+    now = datetime.datetime.now()
+    formatted_time = now.strftime("%H:%M:%S")
+    print("运行时间：", formatted_time)
+    while(formatted_time!=23:00:00):
+        now = datetime.datetime.now()
+        formatted_time = now.strftime("%H:%M:%S")
     try:
         logged_in_session = apis.login(USER_ID, USER_PASSWORD)
         campus_id, sport_id = apis.load_sports_and_campus_id(logged_in_session, SERVICE_CATEGORY, CAMPUS_NAME, SPORT_NAME)
         service_id = apis.get_service_id(logged_in_session, SERVICE_CATEGORY, campus_id, sport_id, SPORT_LOCATION)
-        now = datetime.datetime.now()
-        formatted_time = now.strftime("%H:%M:%S")
-        print("运行时间：", formatted_time)
+        
         apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_1)
         apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_2)
         apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_3)
