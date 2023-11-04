@@ -20,6 +20,5 @@ jobs:
         with:
           python-version: '3.8'
       - name: Prepare environment
-        run: pip install bs4 easyocr requests opencv-python numpy lxml
       - name: Run app
-        run: python main.py
+        run: python test.py
