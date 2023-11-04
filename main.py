@@ -27,7 +27,7 @@ if __name__ == '__main__':
     now = datetime.datetime.now()
     formatted_time = now.strftime("%H%M%S")
     print("运行时间：", formatted_time)
-    while(formatted_time!="230000"):
+    while(formatted_time!="000000"):
         now = datetime.datetime.now()
         formatted_time = now.strftime("%H%M%S")
         time.sleep(0.3)
