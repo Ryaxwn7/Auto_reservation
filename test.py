@@ -23,10 +23,10 @@ EMAIL_PASSWORD = "mmmjl123123"  # Password for the email account
 
 if __name__ == '__main__':
     now = datetime.datetime.now()
-    formatted_time = now.strftime("%H%M%S")
+    formatted_time = now.strftime("%M%S")
     print("运行时间：", formatted_time)
-    '''while(formatted_time!="230000"):
+    while(formatted_time!="5500"):
         now = datetime.datetime.now()
-        formatted_time = now.strftime("%H%M%S")
+        formatted_time = now.strftime("%M%S")
         time.sleep(0.3)
-    '''
+    
