@@ -11,7 +11,7 @@ USER_PASSWORD = "Mmmmjl123123"
 CAMPUS_NAME = "邯郸校区"
 SPORT_NAME = "网球"
 SPORT_LOCATION = "南区网球场"
-DATE = "2023-11-10"
+DATE = "2023-11-11"
 TIME_1 = "20:00"
 TIME_2 = "21:00"
 TIME_3 = "19:00"
@@ -27,10 +27,10 @@ if __name__ == '__main__':
     now = datetime.datetime.now()
     formatted_time = now.strftime("%M%S")
     print("运行时间：", formatted_time)
-    while(formatted_time!="0001"):
+    while(formatted_time!="0000"):
         now = datetime.datetime.now()
         formatted_time = now.strftime("%M%S")
-        time.sleep(0.3)
+        time.sleep(0.1)
     print("到达时间：", formatted_time)
     try:
         logged_in_session = apis.login(USER_ID, USER_PASSWORD)
