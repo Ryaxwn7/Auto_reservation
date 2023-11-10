@@ -11,7 +11,7 @@ USER_PASSWORD = "Mmmmjl123123"
 CAMPUS_NAME = "邯郸校区"
 SPORT_NAME = "网球"
 SPORT_LOCATION = "南区网球场"
-DATE = "2023-11-12"
+DATE = "2023-11-11"
 TIME_1 = "20:00"
 TIME_2 = "21:00"
 TIME_3 = "19:00"
@@ -39,21 +39,10 @@ if __name__ == '__main__':
         formatted_time = now.strftime("%M%S")
         print("开始时间：", formatted_time)
         apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_1)
-        #apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_2)
-        #apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_3)
-        #apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_4)
-        if EMAILS:
-                import smtplib
-                import datetime
-                message = f"Reserve Finished."
-                connection = smtplib.SMTP("smtp-mail.outlook.com", 587)
-                try:
-                    connection.ehlo()
-                    connection.starttls()
-                    connection.login(YOUR_EMAIL, EMAIL_PASSWORD)
-                    connection.sendmail(YOUR_EMAIL, EMAILS, message)
-                finally:
-                    connection.quit()
+        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_2)
+        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_3)
+        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_4)
+       
     except Exception as e:
         if EMAILS:
             import smtplib
