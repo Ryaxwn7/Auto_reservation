@@ -11,7 +11,7 @@ USER_PASSWORD = "Mmmmjl123123"
 CAMPUS_NAME = "邯郸校区"
 SPORT_NAME = "网球"
 SPORT_LOCATION = "南区网球场"
-DATE = "2023-11-14"
+DATE = "2023-11-15"
 TIME_1 = "20:00"
 TIME_2 = "21:00"
 TIME_3 = "19:00"
@@ -38,6 +38,11 @@ if __name__ == '__main__':
         service_id = apis.get_service_id(logged_in_session, SERVICE_CATEGORY, campus_id, sport_id, SPORT_LOCATION)
         formatted_time = now.strftime("%M%S")
         print("开始时间：", formatted_time)
+        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_1)
+        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_2)
+        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_3)
+        apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_4)
+        time.sleep(1) #wait for 1 sec and do these again
         apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_1)
         apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_2)
         apis.reserve(logged_in_session, service_id, SERVICE_CATEGORY, DATE, TIME_3)
