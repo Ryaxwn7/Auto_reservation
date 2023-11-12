@@ -30,7 +30,7 @@ if __name__ == '__main__':
     while(formatted_time!="0000"):
         now = datetime.datetime.now()
         formatted_time = now.strftime("%M%S")
-        time.sleep(0.1)
+        time.sleep(0.01)
     print("到达时间：", formatted_time)
     try:
         logged_in_session = apis.login(USER_ID, USER_PASSWORD)
